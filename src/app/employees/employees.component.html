@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="header2">
+              <h4 class="title">Employees</h4>
+          </div>
+          <div class="card2">
+              <div class="content table-responsive table-full-width">
+
+                  <table class="table table-striped">
+                      <thead>
+                          <tr>
+                              <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let row of tableData1.dataRows">
+                              <td *ngFor="let cell of row">{{cell}}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+
+                  <!-- <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let cell of headerRow">{{ cell }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let row of employees">
+                                <td *ngFor="let cell of row">{{cell}}</td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

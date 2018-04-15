@@ -1,0 +1,43 @@
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a href="/dashboard" class="simple-text">
+            <div class="logo-img">
+                <img src="../../assets/img/angular2-logo.png" alt="">
+            </div>
+            ShortList
+        </a>
+    </div>
+    <ul class="nav">
+            <li class="divider" *ngIf="isNotMobileMenu()"></li>
+        <!-- <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
+            <a [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li> -->
+        <li>
+            <a href="/dashboard">
+                <i class="ti-dashboard"></i>
+                <p>Dashboard</p>
+            </a>
+        </li>
+        <li>
+            <a href="/employees">
+                <i class="ti-user"></i>
+                <p>Employees</p>
+            </a>
+        </li>
+        <li>
+            <a href="applicants">
+                <i class="ti-star"></i>
+                <p>Applicants</p>
+            </a>
+        </li>
+        <li>
+            <a href="analytics">
+                <i class="ti-bar-chart"></i>
+                <p>Analytics</p>
+            </a>
+        </li>
+    </ul>
+</div>
