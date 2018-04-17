@@ -30,15 +30,3 @@ export class EmployeesService {
     return this._http.get<IEmployee[]>(this.employeesUrl);
   }
 }
-
-// @Injectable()
-// export class EmployeesService {
-//   private employeesUrl: string = 'http://localhost:5000/api/employees';
-
-//   constructor(private _http: Http){}
-
-//   getEmployees(){
-//     return this._http.get(this.employeesUrl)
-//       .map((response:Response) => response.json());
-//   }
-// }
