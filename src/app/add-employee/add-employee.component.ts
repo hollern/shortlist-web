@@ -7,35 +7,37 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: './add-employee.component.html',
   styleUrls: ['./add-employee.component.css']
 })
-export class AddEmployeeComponent implements OnInit {
-  public employees;
 
-  constructor(private _addEmployeeService: AddEmployeeService) { }
+// export class AddEmployeeComponent implements OnInit {
+export class AddEmployeeComponent {
+  // public employees;
 
-  ngOnInit() {
-    this.getEmployees();
-  }
+  // constructor(private _addEmployeeService: AddEmployeeService) { }
 
-  getEmployees(){
-    this._addEmployeeService.getEmployees().subscribe(
-        data => {this.employees = data},
-        err => console.log(err),
-        () => console.log('Done loading')
-    );
-  }
+  // ngOnInit() {
+  //   this.getEmployees();
+  // }
+
+  // getEmployees(){
+  //   this._addEmployeeService.getEmployees().subscribe(
+  //       data => {this.employees = data},
+  //       err => console.log(err),
+  //       () => console.log('Done loading')
+  //   );
+  // }
   
-  createEmployee(name){
-    let employee = {name: name};
-    this._addEmployeeService.createEmployee(employee).subscribe(
-      data => {
-        this.getEmployees();
-        return true;
-      },
-        error => {
-          console.error("Error saving employee");
-          return Observable.throw(error);
-        }
-    );
-  }
+  // createEmployee(name){
+  //   let employee = {name: name};
+  //   this._addEmployeeService.createEmployee(employee).subscribe(
+  //     data => {
+  //       this.getEmployees();
+  //       return true;
+  //     },
+  //       error => {
+  //         console.error("Error saving employee");
+  //         return Observable.throw(error);
+  //       }
+  //   );
+  // }
 
 }
