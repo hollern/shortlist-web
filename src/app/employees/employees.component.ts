@@ -13,25 +13,25 @@ declare interface TableData {
     templateUrl: 'employees.component.html'
 })
 
-// export class EmployeesComponent implements OnInit{
-//     public tableData1: TableData;
+export class EmployeesComponent implements OnInit{
+    public tableData1: TableData;
 
-//     constructor(){}
+    constructor(){}
 
-//     ngOnInit(){
-//         this.tableData1 = {
-//             headerRow: [ 'EmpID', 'Name', 'Role', 'Department', 'Salary', 'Date Joined'],
-//             dataRows: [
-//                 ['100001', 'Person 1', 'Sales Manager', 'Sales', '$36,738', '2017-01-15'],
-//                 ['100002', 'Person 2', 'Director', 'Internal Audit', '$103,789', '2003-05-01'],
-//                 ['100003', 'Person 3', 'HR Generalist', 'Baileux', '$56,142', 'Test'],
-//                 ['100004', 'Person 4', 'Korea, South', 'Overland Park', '$38,735', 'Test'],
-//                 ['100005', 'Person 5', 'Malawi', 'Feldkirchen in Kärnten', '$63,542', 'Test'],
-//                 ['100006', 'Person 6', 'Chile', 'Gloucester', '$78,615', 'Test']
-//             ]
-//         };
-//     }
-// }
+    ngOnInit(){
+        this.tableData1 = {
+            headerRow: [ 'EmpID', 'Name', 'Role', 'Department', 'Salary', 'Date Joined'],
+            dataRows: [
+                ['100001', 'Person 1', 'Manager', 'Sales', '$96,738', '2017-01-15'],
+                ['100002', 'Person 2', 'Director', 'Internal Audit', '$103,789', '2003-05-01'],
+                ['100003', 'Person 3', 'HR Generalist', 'Human Resources', '$56,142', '2004-12-10'],
+                ['100004', 'Person 4', 'Accountant', 'Corporate Finance', '$68,735', '2014-04-25'],
+                ['100005', 'Person 5', 'Director', 'Operations', '$163,542', '2010-01-01'],
+                ['100006', 'Person 6', 'Analyst', 'Operations', '$78,615', '2007-12-31']
+            ]
+        };
+    }
+}
 
 // ACCTMIS 3610 method
 // export class EmployeesComponent implements OnInit {
@@ -50,20 +50,20 @@ declare interface TableData {
 // }
 
 // Other method
-export class EmployeesComponent implements OnInit {
-    public employees;
+// export class EmployeesComponent implements OnInit {
+//     public employees;
     
-    constructor(private _employeesService: EmployeesService){}
+//     constructor(private _employeesService: EmployeesService){}
 
-    ngOnInit(){
-        this.getEmployees();
-    }
+//     ngOnInit(){
+//         this.getEmployees();
+//     }
 
-    getEmployees(){
-        this._employeesService.getEmployees().subscribe(
-            data => {this.employees = data},
-            err => console.log(err),
-            () => console.log('Done loading')
-        );
-    }
-}
+//     getEmployees(){
+//         this._employeesService.getEmployees().subscribe(
+//             data => {this.employees = data},
+//             err => console.log(err),
+//             () => console.log('Done loading')
+//         );
+//     }
+// }
